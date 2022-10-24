@@ -1,0 +1,687 @@
+body {background-color: var(--background);}
+
+/* variable declaration */
+:root{
+    --fontcolor: gainsboro;
+    --textcolor: gray;
+    --headercolor: rgb(161, 137, 0);
+    --background: #232425;
+	--copyright: #D3D3D3;
+
+    --strcolor: #cf4d01;
+    --dexcolor: #168500;
+    --concolor: #9c8d00;
+    --intcolor: #3b6edd;
+    --wiscolor: #2b8da5;
+    --chacolor: #8a003a;
+
+    --platinum: #D3D6D8;
+    --gold: #FFD700;
+    --silver: #C0C0C0;
+    --copper: #B87333;
+}
+
+@font-face {
+
+    font-family: "diablo";
+    src: url('diablo.woff');
+
+    color:var(--fontcolor);
+}
+
+@font-face {
+
+    font-family: "onuava";
+    src: url("onuava.woff");
+
+    color:var(--fontcolor);
+}
+
+.headerbox{
+    display: flex;
+}
+
+.box{
+    display: inline-table;
+    width: 100%;
+    height: 60px;
+}
+
+.grey{
+    background: #1E1E1E;
+}
+
+.layout{
+    width: 100%;
+    height: 50%;
+    display: flex;
+    gap: 0px;
+}
+
+.layoutStacked{
+    position: relative;
+}
+
+.resizedTextbox {
+    width: 200px; 
+    height: 30px;
+    padding: 0px;
+}
+
+.resizedTextboxSlim {
+    width: 75px; 
+    height: 30px;
+    padding: 0px;
+    margin-bottom: 5px;
+}
+
+.eqNameTextbox {
+    width: 400px; 
+    height: 30px;
+    padding: 0px;
+    margin-right: 5px;
+}
+
+.eqBonusTextbox {
+    width: 125px; 
+    height: 30px;
+    padding: 0px;
+    margin-right: 5px;
+}
+
+.eqDamageTextbox {
+    width: 300px; 
+    height: 30px;
+    padding: 0px;
+    margin-right: 5px;
+}
+
+.spellHeader {
+    width: 500px; 
+    height: 30px;
+    padding: 0px;
+    margin-right: 5px;
+    border-bottom: dashed 1px;
+}
+
+.spellSlots {
+    width: 100px; 
+    height: 30px;
+    padding: 0px;
+    margin-right: 5px;
+    border-bottom: dashed 1px;
+}
+
+.spellCantrips{
+    width: 400px; 
+    height: 30px;
+    padding: 0px;
+    margin-left: 50px;
+    border-bottom: dashed 1px;
+}
+
+.resizedTextboxMod {
+    width: 35px; 
+    height: 35px;
+    padding: 0px;
+    font: 200 20px "diablo";
+}
+
+textarea{
+    vertical-align: top;
+    border-radius: 5px;
+    background-color: rgba(0, 0, 0, 0);
+    font: 200 20px "diablo";
+    color: var(--fontcolor);
+    border:solid 2px var(--fontcolor);
+    outline: var(--fontcolor);
+    padding: 10px 10px;
+    margin: 5px;
+}
+
+.resizedTextarea {
+    width: 300px; 
+    height: 200px;
+    padding: 0px
+}
+
+.resizedTextareaInventory {
+    width: 300px; 
+    height: 570px;
+    padding: 0px;
+    max-height: 600px;
+    resize: vertical;
+    font: 14px "onuava";
+}
+
+.resizedTextareaNotes {
+    width: 310px; 
+    height: 854px;
+    padding: 0px;
+    max-height: 854px;
+    resize: vertical;
+    font: 14px "onuava";
+    
+}
+
+.fauxcheckboxFail{
+    width: 30px; 
+    height: 30px;
+    padding: 0px;
+    margin-right: 11px;
+    color:rgb(189, 0, 0)
+}
+
+.fauxcheckboxSuccess{
+    width: 30px; 
+    height: 30px;
+    padding: 0px;
+    margin-right: 11px;
+    color:rgb(52, 165, 0)
+}
+
+.textstyle{
+    font-family: "diablo";
+    color: var(--fontcolor);
+}
+
+progress {
+    background-color: var(--dexcolor);
+    width: 500px;
+    height: 20px;
+    float: right;
+    position: relative;
+    top: 35px;
+    border: 2px solid black;
+  }
+
+  ::-webkit-progress-value {
+    background-color: rgb(170, 0, 0);
+  }
+  
+  ::-moz-progress-bar {
+    background-color: rgb(170, 0, 0);
+  }
+
+  ::-ms-progress-bar {
+    background-color: rgb(170, 0, 0);
+  }
+  
+
+.platinum{
+    color: var(--platinum);
+    font: 200 16px "diablo";
+    padding-right: 20px;
+}
+
+.gold{
+    color: var(--gold);
+    font: 200 16px "diablo";
+    padding-right: 20px;
+}
+
+.silver{
+    color: var(--silver);
+    font: 200 16px "diablo";
+    padding-right: 20px;
+}
+
+.copper{
+    color: var(--copper);
+    font: 200 16px "diablo";
+    padding-right: 20px;
+}
+
+.platinumSpan{
+    color: var(--platinum);
+    font: 200 16px "diablo";
+}
+
+.goldSpan{
+    color: var(--gold);
+    font: 200 16px "diablo";
+}
+
+.silverSpan{
+    color: var(--silver);
+    font: 200 16px "diablo";
+}
+
+.copperSpan{
+    color: var(--copper);
+    font: 200 16px "diablo";
+}
+
+.tableinputCurrency{
+    width: 50px; 
+    height: 25px;
+    font: 200 16px "diablo";
+    margin-right: 0px;
+}
+
+.converterBorder{
+    display: table;
+    border: solid 2px var(--textcolor);
+    border-radius: 5px;
+    margin-top: 10px;
+    padding: 5px;
+    width: 305px;
+    height: 100px;
+}
+
+.informationBorder{
+    display: table;
+    border: solid 2px var(--textcolor);
+    border-radius: 5px;
+    margin-top: 10px;
+    padding: 5px;
+    width: 315px;
+    height: 210px;
+}
+
+select{
+    color: var(--fontcolor);
+    border-radius: 5px;
+    font: 200 14px "diablo";
+    border: solid 2px var(--fontcolor);
+    outline: var(--fontcolor);
+    padding: 10px 10px;
+    margin: 5px;
+}
+
+h2 {
+    color: var(--fontcolor);
+    font: 700 20px "diablo";
+    text-align: center;
+    top: 0px;
+    margin: 0px;
+    padding: 5px;
+    text-transform: uppercase;
+    border-bottom: 2px solid rgb(136, 136, 136);
+}
+
+
+
+.tablelayout{
+    vertical-align: left;
+    text-align: left;
+    display: table;
+}
+
+.currencyWrap{
+    display: table;
+    border: solid 2px var(--textcolor);
+    border-radius: 5px;
+    margin: 5px;
+    padding: 5px;
+}
+
+.abilitywrap{
+    display: table;
+    border: solid 2px var(--textcolor);
+    border-radius: 5px;
+    margin: 5px;
+    padding: 10px;
+    width: 1180px;
+}
+
+.abilitywrapSavethrow{
+    display: table;
+    border: solid 2px var(--textcolor);
+    border-radius: 5px;
+    margin: 5px;
+    margin-left: 10px;
+    padding: 10px;
+    height: 400px;
+    width: 320px;
+    min-width: 320px;
+}
+
+.abilitywrapFixedWidth{
+    display: table;
+    border: solid 2px var(--textcolor);
+    border-radius: 5px;
+    margin: 5px;
+    margin-left: 10px;
+    padding: 10px;
+    width: 320px;
+    height: 935px;
+}
+
+.abilitywrapChild{
+    display: table;
+    border: solid 2px var(--textcolor);
+    border-radius: 5px;
+    text-align: center;
+    margin-left: 5px;
+    margin-top: 5px;
+    vertical-align: center;
+    width: 100px;
+    padding-bottom: 5px;
+}
+
+.abilitywrapMod{
+    display: table;
+    border: solid 2px var(--textcolor);
+    border-radius: 20px;
+    padding: 10px;
+    margin: 0 auto;
+}
+
+.abSTR{	
+	display: table;
+    font: 400 20px "diablo";
+    color: var(--fontcolor);
+	vertical-align: center;
+    text-align: center;
+	margin-top: 5px;
+	border-radius: 5px;
+	border: solid 2px var(--strcolor);
+	padding: 10px 10px;
+    width: 320px;
+}
+
+.abDEX{	
+	display: table;
+    font: 400 20px "diablo";
+    color: var(--fontcolor);
+	vertical-align: center;
+    text-align: center;
+	margin-top: 20px;
+	border-radius: 5px;
+	border: solid 2px var(--dexcolor);
+	padding: 10px 10px;
+    width: 320px;
+}
+
+.abCON{	
+	display: table;
+    font: 400 20px "diablo";
+    color: var(--fontcolor);
+	vertical-align: center;
+    text-align: center;
+	margin-top: 20px;
+	border-radius: 5px;
+	border: solid 2px var(--concolor);
+	padding: 10px 10px;
+    width: 320px;
+}
+
+.abINT{	
+	display: table;
+    font: 400 20px "diablo";
+    color: var(--fontcolor);
+	vertical-align: center;
+    text-align: center;
+	margin-top: 20px;
+	border-radius: 5px;
+	border: solid 2px var(--intcolor);
+	padding: 10px 10px;
+    width: 320px;
+}
+
+.abWIS{	
+	display: table;
+    font: 400 20px "diablo";
+    color: var(--fontcolor);
+	vertical-align: center;
+    text-align: center;
+	margin-top: 20px;
+	border-radius: 5px;
+	border: solid 2px var(--wiscolor);
+	padding: 10px 10px;
+    width: 320px;
+}
+
+.abCHA{	
+	display: table;
+    font: 400 20px "diablo";
+    color: var(--fontcolor);
+	vertical-align: center;
+    text-align: center;
+	margin-top: 20px;
+	border-radius: 5px;
+	border: solid 2px var(--chacolor);
+	padding: 10px 10px;
+    width: 320px;
+}
+
+.tableinput{
+    width: 50px; 
+    height: 50px;
+    font: 400 20px "diablo";
+}
+
+.learnedLanguage{
+    margin-top: 5px;
+    margin-left: 10px;
+    margin-right: 15px;
+    width: 125px; 
+    height: 20px;
+    font: 14px "onuava";
+}
+
+p{
+    color: var(--headercolor);
+    font: 400 40px "diablo";
+    margin-left: 20px;
+}
+
+.converter{
+    color: var(--textcolor);
+    font: 400 18px "diablo";
+    text-align: left;
+    display: inline-block;
+}
+
+.coinsSVG{
+    width: 120px;
+    height: 120px;
+    float: right;
+}
+
+/* visited hyperlink */
+a:visited { 
+  color: white;
+}
+
+/* Textboxstyle */
+input{
+    color:var(--fontcolor);
+    background: rgba(0, 0, 0, 0);
+    font: 400 20px "diablo";
+    border: none;
+    outline: var(--fontcolor);
+    border-bottom: 1px solid var(--fontcolor);
+    text-align: center;
+}
+
+
+/* Datei auswählen */
+input[type=file]{
+    border-radius: 5px;
+    background-color: rgba(0, 0, 0, 0);
+    font: 200 14px "diablo";
+    color: rgb(194, 66, 7);
+    border:solid 2px var(--fontcolor);
+    outline: var(--fontcolor);
+    padding: 10px 10px;
+    margin: 5px;
+}
+
+/* Upload / Load Sheet */
+button{
+    border-radius: 5px;
+    background-color: rgba(0, 0, 0, 0);
+    font: 200 14px "diablo";
+    color: var(--fontcolor);
+    border: solid 2px var(--fontcolor);
+    outline: var(--fontcolor);
+    padding: 10px 10px;
+    margin: 5px;
+}
+
+/* Reload Prof. bonus */
+.buttonReloadBonus{
+    border-radius: 5px;
+    background-color: rgba(0, 0, 0, 0);
+    font: 8px "diablo";
+    color: var(--fontcolor);
+    border: solid 1px var(--fontcolor);
+    outline: var(--fontcolor);
+    float: right;
+}
+
+.inputDefault{
+    color: rgb(194, 66, 7);
+    background: rgba(0, 0, 0, 0);
+    font: 200 14px "diablo";
+    border: none;
+    outline: var(--fontcolor);
+    border-bottom: 1px solid var(--fontcolor);
+    text-align: center;
+}
+
+th{
+    color: var(--textcolor);
+    font: 400 14px "diablo";
+    text-align: center;
+}
+
+.cantripsSpacer{
+    color: var(--textcolor);
+    font: 400 14px "diablo";
+    text-align: center;
+}
+
+.tableSpacer{
+    display: inline-block;
+    margin-left: 100px;
+    text-align: center;
+}
+
+.tableStyleHeader{
+    color: var(--fontcolor);
+    font: 400 14px "diablo";
+    text-align: center;
+    border-bottom: 1px solid var(--fontcolor);
+}
+
+.tableStyle{
+    color: var(--textcolor);
+    font: 400 14px "diablo";
+    text-align: center;
+}
+
+.tableStyleAlternating{
+    color: var(--fontcolor);
+    font: 400 14px "diablo";
+    text-align: center;
+}
+
+label{
+    color: var(--textcolor);
+    font: 400 16px "diablo";
+    padding-left: 20px;
+    
+}
+
+.profBonusSpan{
+    color: var(--textcolor);
+    font: 400 25px "diablo";
+    float: right;
+    display: table;
+    border: solid 2px var(--textcolor);
+    border-radius: 10px;
+    padding: 10px;
+    margin-left: 5px;
+
+}
+
+.saveThrowSpan{
+    color: var(--textcolor);
+    font: 400 16px "diablo";
+    float: right;
+}
+
+.strlabel{
+    color: var(--strcolor);
+    font: 400 18px "diablo";
+    padding-right: 20px;
+}
+
+.dexlabel{
+    color: var(--dexcolor);
+    font: 400 18px "diablo";
+    padding-right: 20px;
+    
+}
+
+.conlabel{
+    color: var(--concolor);
+    font: 400 18px "diablo";
+    padding-right: 20px;
+    
+}
+
+.intlabel{
+    color: var(--intcolor);
+    font: 400 18px "diablo";
+    padding-right: 20px;
+    
+}
+
+.wislabel{
+    color: var(--wiscolor);
+    font: 400 18px "diablo";
+    padding-right: 20px;
+    
+}
+
+.chalabel{
+    color: var(--chacolor);
+    font: 400 18px "diablo";
+    padding-right: 20px;
+    
+}
+
+.spelllabel{
+    color: white;
+    font: 400 18px "diablo"    
+}
+
+button:hover{
+    color: var(--background);
+    background-color: var(--fontcolor);
+}
+
+.downloadbox{
+	text-align: right;	
+    border-radius: 5px;
+}
+
+.leftaligndownloadbox{
+	display: inline-block;
+	text-align: left;
+	border: solid 2px #5D5D5D;
+	border-radius: 5px;
+    padding: 10px 10px;
+    margin: 5px;
+}
+
+.copyright{
+	color: var(--copyright);
+    font: 400 10px "diablo";
+    text-align: center;
+}
+
+.counter{
+    text-align: center;
+    padding-left: 15px;
+}
+
+.footer {
+  padding: 5px 0;
+  background-color: var(--background);
+  color: var(--fontcolor);
+}
