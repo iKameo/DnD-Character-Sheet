@@ -36,6 +36,7 @@
 
 ## Features
 - __basic:__ written in plain `html`,`css` and vanilla `javascript`.
+- __language:__ supports german and english localization.
 - __lighweigt:__ under `700kb` in size and loads in `300ms`.
 - __selhostable:__ is this even a real word?
 - __json:__ download & save your own character sheet.
@@ -57,13 +58,17 @@ css
 assets
   ⮡ coins.svg
   ⮡ header.png
+  ⮡ de.svg
+  ⮡ gb.png
 js
   ⮡ conversion.js
   ⮡ spelcasting.js
   ⮡ function.js
   ⮡ healthbar.js
   ⮡ calculation.js
-index.html
+  ⮡ fontchange.js
+  ⮡ localization.js
+index.php
 ```
 
 ## FAQ
