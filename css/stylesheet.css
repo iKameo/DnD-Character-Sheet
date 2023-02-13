@@ -41,6 +41,22 @@ body {background-color: var(--background);}
     display: flex;
 }
 
+.buttonLangEN{
+    background:url(/assets/gb.svg) no-repeat center;
+    background-size: 100%;
+    width: 57px;
+    height: 29px;
+    border-radius: 5px;
+}
+
+.buttonLangDE{
+    background:url(/assets/de.svg) no-repeat center;
+    background-size: 100%;
+    width: 57px;
+    height: 29px;
+    border-radius: 5px;
+}
+
 .box{
     display: inline-table;
     width: 100%;
@@ -147,7 +163,7 @@ textarea{
 
 .resizedTextareaInventory {
     width: 300px; 
-    height: 570px;
+    height: 527px;
     padding: 0px;
     max-height: 600px;
     resize: vertical;
@@ -280,13 +296,23 @@ progress {
 }
 
 select{
-    color: var(--fontcolor);
+    color: var(--background);
     border-radius: 5px;
     font: 200 14px "diablo";
     border: solid 2px var(--fontcolor);
     outline: var(--fontcolor);
     padding: 10px 10px;
     margin: 5px;
+}
+
+.selectFont{
+    color: var(--background);
+    border-radius: 5px;
+    font: 200 12px "diablo";
+    border: solid 2px var(--fontcolor);
+    outline: var(--fontcolor);
+    padding: 5px;
+    float: right;
 }
 
 h2 {
@@ -323,6 +349,15 @@ h2 {
     margin: 5px;
     padding: 10px;
     width: 1180px;
+}
+
+.abilitywrapLang{
+    display: table;
+    border: solid 2px var(--textcolor);
+    border-radius: 5px;
+    margin: 5px;
+    padding: 5px;
+    width: 1190px;
 }
 
 .abilitywrapSavethrow{
