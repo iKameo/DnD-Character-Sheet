@@ -1,5 +1,5 @@
 <p align="center">
-    <img src="https://pictures.byteoverflow.de/gallery-images/firefox_rpcfR9grAy.png"
+    <img src="https://dnd.wild-seven.de/assets/header.png"
         height="100">
 </p>
 <p align="center">
@@ -13,39 +13,61 @@
 </p>
 
 
+<div align="center">
+  <h3>
+    <a href="https://dnd.wild-seven.de">
+      Website
+    </a>
+    <span> | </span>
+    <a href="https://dnd.wild-seven.de/dice">
+      Dice
+    </a>    
+  </h3>
+</div>
+
+
+
 ## Table of Contents
 - [Features](#features)
+- [Bugs](#bugs)
 - [Selfhosting](#selfhosting)
+- [FAQ](#faq)
+- [Support](#support)
 
 ## Features
 - __basic:__ written in plain `html`,`css` and vanilla `javascript`.
+- __lighweigt:__ under `700kb` in size and loads in `300ms`.
 - __selhostable:__ is this even a real word?
-- __janky:__ code made by me and is held together with ducttape and hope.
+- __json:__ download & save your own character sheet.
+- __janky:__ code made by me and is my first `html` `css` `js` project.
 
+## Bugs
+As far as i know and tested, there are no ~~gamebreaking~~ bugs. But thanks to Apple and their ultimate wisdom, the site breaks
+on Apple devices. No matter which browser you use. It is possible to use the site, it just wont be pretty. I dont know how to fix this
+and i dont really care.
 
 ## Selfhosting
 You´ll need a webserver which is capable of rendering `html` and `css` - so basically any webserver.
-Additionally you´ll need a selfhosted FoundryVTT instance with GM access.
-
-Drop the __pulldata_style.php__ into your `www` directory and your good to go.
-
-Modify the apilib.js to point to your own website.
+Drop the files and folders in this format into you `www` directory and your good to go
+```js
+css
+  ⮡ onuava.woof
+  ⮡ diablo.woff
+  ⮡ stylesheet.css
+assets
+  ⮡ coins.svg
+  ⮡ header.png
+js
+  ⮡ conversion.js
+  ⮡ spelcasting.js
+  ⮡ function.js
+  ⮡ healthbar.js
+  ⮡ calculation.js
+index.html
 ```
-function sendPlayerData(data) {
-  const url = 'https://beta.byteoverflow.de/foundry/pulldata_style.php'; // Replace with your PHP script URL
-  fetch(url, {
-    method: 'POST',
-    headers: {
-      'Content-Type': 'application/json'
-    },
-    body: JSON.stringify(data)
-  })
-```
-Add the __apilib.js__ and the __module.json__ to your modules folder inside your foundry installation.
 
-<p align="left">
-    <img src="https://pictures.byteoverflow.de/gallery-images/WinSCP_c7qnZOP9r5.png">
-</p>
+## FAQ
+dont have any.
 
 ## Support
 If you want to help or have a feature request just drop a pull request and we´ll see
@@ -55,3 +77,7 @@ If you want to help or have a feature request just drop a pull request and we´l
 All assets and code are under the <a href="https://www.gnu.org/licenses/gpl-3.0.en.html">GPLv3 license</a> unless specified otherwise.
 
 All assets are trademarks of their respective companies and are under their terms and license.
+
+## Community
+
+Special thanks to `Geist` for his DnD knowledge and `nore` and `kuchen` for their design support.
